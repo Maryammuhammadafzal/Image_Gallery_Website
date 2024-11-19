@@ -1,0 +1,58 @@
+/* General Reset */
+body {
+      margin: 0;
+      padding: 0rem;
+      font-family: Arial, sans-serif;
+      background-color: #f1f0e1;
+      color: #ffffff;
+      background-image: url(./Images/we.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;  
+      position: relative;
+}
+
+
+
+img {
+  border: 1px solid #d0d8d0;
+}
+
+button {
+  background-color: #6a8e53;
+  color: white;
+}
+
+button:hover {
+  background-color: #7c9b6e;
+}
+    
+    /* Welcome Page Styling */
+    .welcome {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .get-started {
+      padding: 1rem 3rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    
