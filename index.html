@@ -19,16 +19,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="container">
+  
     <!-- Welcome Page -->
     <div id="welcome-page" class="welcome">
       <nav>
         <div id="logo"><h1>Sunlit Scenes</h1></div>
         <div id="navTabs">
-          <li id="navHome">Home</li>
-          <li id="navAome">About</li>
-          <li id="navGome">Gallery</li>
-          <li id="navCome">Contact</li>
+          <li id="navHome" class="navTab"><a href="#home">Home</a></li>
+          <li id="navAome" class="navTab"><a href="#about">About</a></li>
+          <li id="navGome" class="navTab"><a href="#gallery">Gallery</a></li>
+          <li id="navCome" class="navTab"><a href="#contact">Contact</a></li>
         </div>
         <div id="navBtn">
           <button>SignIn</button>
@@ -146,7 +146,7 @@
         </div>
     </div>
 
-    <div id="gallery-content">
+    <div id="contact-content">
     <section class="contact-section">
       <h2>Contact Us</h2>
       <p>We’d love to hear from you! Feel free to reach out with any questions or feedback.</p>
@@ -154,30 +154,56 @@
       <div class="contact-container">
         <!-- Contact Form -->
         <form class="contact-form">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
+          <input type="email" id="email" name="email" required placeholder="Email">
     
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-    
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-    
-          <button type="submit">Send Message</button>
+          <button type="submit">Send</button>
         </form>
     
-        <!-- Contact Information -->
+        <!-- Contact Information
         <div class="contact-info">
           <h3>Contact Information</h3>
           <p><strong>Email:</strong> support@yourgallery.com</p>
           <p><strong>Phone:</strong> +1 234 567 890</p>
           <p><strong>Address:</strong> 123 Gallery St, City, Country</p>
-        </div>
-      </div>
+        </div> -->
+      </div> 
     </section>
     </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+          <h3>About Gallery</h3>
+          <p><strong>Sunlit Scenes</strong> offers a curated collection of stunning images. Explore creativity and inspiration with every click!</p>
+        </div>
     
-  </div>
+        <!-- Navigation Links -->
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#welcome-page">Home</a></li>
+            <li><a href="#gallery-content">Gallery</a></li>
+            <li><a href="#about-content">About</a></li>
+            <li><a href="#contact-content">Contact</a></li>
+          </ul>
+        </div>
+    
+        <!-- Social Media Links -->
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <a href="https://facebook.com" target="_blank">Facebook</a> |
+          <a href="https://instagram.com" target="_blank">Instagram</a> |
+          <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 YourGallery. All rights reserved.</p>
+      </div>
+    </footer>
+    
+    
+
     <script type="module" src="script.js"></script>
   </body>
 </html>
