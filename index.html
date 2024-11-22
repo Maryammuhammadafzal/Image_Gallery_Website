@@ -10,7 +10,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
-    />
+    /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-  
     <!-- Welcome Page -->
     <div id="welcome-page" class="welcome">
       <nav>
@@ -31,7 +30,7 @@
           <li id="navCome" class="navTab"><a href="#contact">Contact</a></li>
         </div>
         <div id="navBtn">
-          <button>SignIn</button>
+          <button id="signinBtn">SignIn</button>
         </div>
       </nav>
 
@@ -43,47 +42,60 @@
         </p>
       </section>
     </div>
-    
+
     <!-- About Content -->
     <div id="about-content" class="hidden">
       <section class="about-page">
         <h1>About</h1>
         <p>
-          At <strong>Golden Horizon</strong>, we celebrate the beauty of moments captured through the lens. 
-          Our mission is to inspire creativity, evoke emotions, and connect people to the world through art and photography.
+          At <strong>Golden Horizon</strong>, we celebrate the beauty of moments
+          captured through the lens. Our mission is to inspire creativity, evoke
+          emotions, and connect people to the world through art and photography.
         </p>
       </section>
-       
+
       <div class="aboutSections">
         <section id="abouutSection1">
           <h2>What We Offer</h2>
-        <ul>
-          <li><strong>A Stunning Collection:</strong> A carefully curated gallery showcasing vibrant visuals from nature, travel, and art.</li>
-          <li><strong>Interactive Experience:</strong> Navigate effortlessly and enjoy an immersive experience with easy-to-use features.</li>
-          <li><strong>Inspiration for All:</strong> Perfect for art enthusiasts, photographers, and those who simply appreciate the magic of a well-captured moment.</li>
-        </ul>
+          <ul>
+            <li>
+              <strong>A Stunning Collection:</strong> A carefully curated
+              gallery showcasing vibrant visuals from nature, travel, and art.
+            </li>
+            <li>
+              <strong>Interactive Experience:</strong> Navigate effortlessly and
+              enjoy an immersive experience with easy-to-use features.
+            </li>
+            <li>
+              <strong>Inspiration for All:</strong> Perfect for art enthusiasts,
+              photographers, and those who simply appreciate the magic of a
+              well-captured moment.
+            </li>
+          </ul>
         </section>
         <div id="aboutSection2">
           <h2>Our Vision</h2>
-        <p>
-          Our vision is to create a platform where art and technology converge, 
-          providing a unique space for viewers to experience the world through vivid and timeless frames.
-          Our vision is to create a platform where art and technology converge, 
-          providing a unique space for viewers to experience the world through vivid and timeless frames.
-        </p>
+          <p>
+            Our vision is to create a platform where art and technology
+            converge, providing a unique space for viewers to experience the
+            world through vivid and timeless frames. Our vision is to create a
+            platform where art and technology converge, providing a unique space
+            for viewers to experience the world through vivid and timeless
+            frames.
+          </p>
         </div>
       </div>
-        <button class="explore-btn" onclick="exploreGallery()">Explore Gallery</button>
+      <button class="explore-btn" onclick="exploreGallery()">
+        Explore Gallery
+      </button>
     </div>
 
-
-   
-          <!-- Gallery Content -->
+    <!-- Gallery Content -->
     <div id="gallery-content">
       <section class="gallery-page">
         <h2>Gallery</h2>
         <p class="subtitle">A Collection of Captured Moments</p>
-        
+
         <!-- Category Filters -->
         <div class="filters">
           <button onclick="filterGallery('all')">All</button>
@@ -92,82 +104,93 @@
           <button onclick="filterGallery('architecture')">Architecture</button>
         </div>
       </section>
-      
-        <!-- Image Gallery Grid -->
-        <div class="gallery-grid">
 
-          <div class="gallery-item" data-category="people">
-            <img src="./Images/pexels-alvincaal-2853592.jpg" alt="people" />
-          </div>
-          <div class="gallery-item" data-category="technology">
-            <img src="./Images/pexels-bradleyhook-123335.jpg" alt="technology" />
-          </div>
-
-          <div class="gallery-item" data-category="technology">
-            <img src="./Images/pexels-benjaminlehman-1436141.jpg" alt="technology" />
-          </div>
-
-          <div class="gallery-item" data-category="nature">
-            <img src="./Images/pexels-arturo-albarran-1951361020-29410753.jpg" alt="nature" />
-          </div>
-
-          <div class="gallery-item" data-category="statue">
-            <img src="./Images/pexels-darya-grey_owl-132130036-15636670.jpg" alt="statue" />
-          </div>
-          
-            <div class="gallery-item" data-category="sports">
-            <img src="./Images/pexels-omar-ramadan-1739260-27271619.jpg" alt="sports" />
-          </div>
-
-          <div class="gallery-item" data-category="vase">
-            <img src="./Images/pexels-ivan-samkov-7119224.jpg" alt="vase" />
-          </div>
-
-          <div class="gallery-item" data-category="singer">
-            <img src="./Images/pexels-eric-esma-302047-894156.jpg" alt="singer" />
-          </div>
-
-          <div class="gallery-item" data-category="baby">
-            <img src="./Images/pexels-pixabay-459976.jpg" alt="baby" />
-          </div>
-
-          <div class="gallery-item" data-category="couple">
-            <img src="./Images/pexels-limoo-3859717-16759136.jpg" alt="couple" />
-          </div>
-
-          <div class="gallery-item" data-category="headphone">
-            <img src="./Images/pexels-pixabay-248510.jpg" alt="headphone" />
-          </div>
-
-          <div class="gallery-item" data-category="IT">
-            <img src="./Images/pexels-michael-burrows-7129654.jpg" alt="IT" />
-          </div>
-          
+      <!-- Image Gallery Grid -->
+      <div class="gallery-grid">
+        <div class="gallery-item" data-category="people">
+          <img src="./Images/pexels-alvincaal-2853592.jpg" alt="people" />
         </div>
+        <div class="gallery-item" data-category="technology">
+          <img src="./Images/pexels-bradleyhook-123335.jpg" alt="technology" />
+        </div>
+
+        <div class="gallery-item" data-category="technology">
+          <img
+            src="./Images/pexels-benjaminlehman-1436141.jpg"
+            alt="technology"
+          />
+        </div>
+
+        <div class="gallery-item" data-category="nature">
+          <img
+            src="./Images/pexels-arturo-albarran-1951361020-29410753.jpg"
+            alt="nature"
+          />
+        </div>
+
+        <div class="gallery-item" data-category="statue">
+          <img
+            src="./Images/pexels-darya-grey_owl-132130036-15636670.jpg"
+            alt="statue"
+          />
+        </div>
+
+        <div class="gallery-item" data-category="sports">
+          <img
+            src="./Images/pexels-omar-ramadan-1739260-27271619.jpg"
+            alt="sports"
+          />
+        </div>
+
+        <div class="gallery-item" data-category="vase">
+          <img src="./Images/pexels-ivan-samkov-7119224.jpg" alt="vase" />
+        </div>
+
+        <div class="gallery-item" data-category="singer">
+          <img src="./Images/pexels-eric-esma-302047-894156.jpg" alt="singer" />
+        </div>
+
+        <div class="gallery-item" data-category="baby">
+          <img src="./Images/pexels-pixabay-459976.jpg" alt="baby" />
+        </div>
+
+        <div class="gallery-item" data-category="couple">
+          <img src="./Images/pexels-limoo-3859717-16759136.jpg" alt="couple" />
+        </div>
+
+        <div class="gallery-item" data-category="headphone">
+          <img src="./Images/pexels-pixabay-248510.jpg" alt="headphone" />
+        </div>
+
+        <div class="gallery-item" data-category="IT">
+          <img src="./Images/pexels-michael-burrows-7129654.jpg" alt="IT" />
+        </div>
+      </div>
     </div>
 
     <div id="contact-content">
-    <section class="contact-section">
-      <h2>Contact Us</h2>
-      <p>We’d love to hear from you! Feel free to reach out with any questions or feedback.</p>
-    
-      <div class="contact-container">
-        <!-- Contact Form -->
-        <form class="contact-form">
-          <input type="email" id="email" name="email" required placeholder="Email">
-    
-          <button type="submit">Send</button>
-        </form>
-    
-        <!-- Contact Information
-        <div class="contact-info">
-          <h3>Contact Information</h3>
-          <p><strong>Email:</strong> support@yourgallery.com</p>
-          <p><strong>Phone:</strong> +1 234 567 890</p>
-          <p><strong>Address:</strong> 123 Gallery St, City, Country</p>
-        </div> -->
-      </div> 
-    </section>
+      <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>
+          We’d love to hear from you! Feel free to reach out with any questions
+          or feedback.
+        </p>
+
+        <div class="contact-container">
+          <!-- Contact Form -->
+          <form class="contact-form">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Email"
+            />
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </section>
     </div>
 
     <footer class="footer">
@@ -175,9 +198,13 @@
         <!-- About Section -->
         <div class="footer-about">
           <h3>About Gallery</h3>
-          <p><strong>Sunlit Scenes</strong> offers a curated collection of stunning images. Explore creativity and inspiration with every click!</p>
+          <p>
+            <strong>Sunlit Scenes</strong> offers a curated collection of
+            stunning images. Explore creativity and inspiration with every
+            click!
+          </p>
         </div>
-    
+
         <!-- Navigation Links -->
         <div class="footer-links">
           <h3>Quick Links</h3>
@@ -188,7 +215,7 @@
             <li><a href="#contact-content">Contact</a></li>
           </ul>
         </div>
-    
+
         <!-- Social Media Links -->
         <div class="footer-social">
           <h3>Follow Us</h3>
@@ -201,9 +228,15 @@
         <p>&copy; 2024 YourGallery. All rights reserved.</p>
       </div>
     </footer>
-    
-    
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/notyf/3.10.0/notyf.min.js"
+      integrity="sha512-467grL09I/ffq86LVdwDzi86uaxuAhFZyjC99D6CC1vghMp1YAs+DqCgRvhEtZIKX+o9lR0F2bro6qniyeCMEQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script type="module" src="./loginform/login.js"></script>
     <script type="module" src="script.js"></script>
   </body>
 </html>

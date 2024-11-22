@@ -1,0 +1,32 @@
+*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+
+.loginContainer{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+}
+
+.btn-info {
+      background-color: #f6ad55 !important;
+      color: #e2e8f0;
+}
+.link-info{
+      color: #f6ad55 !important;
+}
+.bg-image-vertical {
+      position: relative;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: auto 100%;
+      }
+      
+      @media (min-width: 1025px) {
+      .h-custom-2 {
+      height: 100%;
+      }
+      }
