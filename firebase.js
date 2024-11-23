@@ -1,7 +1,7 @@
 
  // Import the functions 
  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
- import { getAuth , signInWithEmailAndPassword, GoogleAuthProvider , signInWithPopup  } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+ import { getAuth , signInWithEmailAndPassword, GoogleAuthProvider , signInWithPopup , createUserWithEmailAndPassword ,onAuthStateChanged, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
 
  // My web app's Firebase configuration
  const firebaseConfig = {
@@ -18,4 +18,4 @@
  const auth = getAuth(app);
  const provider = new GoogleAuthProvider();
 
- export {auth , signInWithEmailAndPassword , provider ,signInWithPopup};
+ export {auth , signInWithEmailAndPassword , provider ,signInWithPopup , createUserWithEmailAndPassword, onAuthStateChanged , GoogleAuthProvider,signInAnonymously } ;

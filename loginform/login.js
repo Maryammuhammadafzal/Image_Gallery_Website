@@ -1,11 +1,9 @@
 // Import firebase functions
-import { auth, signInWithEmailAndPassword, provider, signInWithPopup } from "../firebase.js";
+import { auth, signInWithEmailAndPassword, provider, signInWithPopup,GoogleAuthProvider, signInAnonymously  } from "../firebase.js";
 
 //Call the Dom Elements from the HTML
 let loginEmail = document.getElementById('loginEmail');
 let loginPassword = document.getElementById('loginPassword');
-console.log(loginEmail , loginEmail.value);
-console.log(loginPassword, loginPassword.value);
 
 // Get the Login Button
 let loginButton = document.getElementById('loginButton');
@@ -13,10 +11,8 @@ let loginButton = document.getElementById('loginButton');
 // Add Event Listener to the Login Button
 loginButton.addEventListener('click', async(e) => {
 
-      console.log(loginEmail , loginEmail.value);
-console.log(loginPassword, loginPassword.value);
+
       // SignIn function
-      // if (loginEmail.value.trim() && loginPassword.value.trim()) {
       signInWithEmailAndPassword(auth, loginEmail.value, loginPassword.value)
             .then((userCredential) => {
                         // Signed in 
@@ -40,21 +36,18 @@ console.log(loginPassword, loginPassword.value);
                               onClick: function () { } // Callback after click
                         }).showToast();
 
-                        console.log(loginEmail , loginEmail.value);
-console.log(loginPassword, loginPassword.value);
+                        setTimeout(()=>{
+                              window.location.href = "../index.html"
+                          },2000)
+                        
                   })
                   .catch((error) => {
                         const errorCode = error.code;
                         const errorMessage = error.message;
                         console.log(errorMessage);
                         console.log(error);
-                        
-                        console.log(loginEmail , loginEmail.value);
-console.log(loginPassword, loginPassword.value);
+
                   });
-            // }
-
-
 })
 
 
@@ -73,6 +66,9 @@ googleButton.addEventListener('click', (e) => {
                   const user = result.user;
                   // IdP data available using getAdditionalUserInfo(result)
                    console.log(user);
+                   setTimeout(()=>{
+                        window.location.href = "../index.html"
+                    },2000)
                    
             }).catch((error) => {
                   // Handle Errors here.
@@ -90,39 +86,40 @@ googleButton.addEventListener('click', (e) => {
 
 
 // Get the guest Button
-// let guestButton = document.getElementById('guestButton');
+let guestButton = document.getElementById('guestButton');
 
-// Add Event Listener to the Login Button
-// guestButton.addEventListener('click', (e) => {
+// Add Event Listener to the guest Button
+guestButton.addEventListener('click', (e) => {
 
-//       // SignIn function
-//       signInWithEmailAndPassword(auth, loginEmail.value, loginPassword.value)
-//             .then((userCredential) => {
-//                   // Signed in 
-//                   const user = userCredential.user;
-//                   console.log(user, user.id);
+      signInAnonymously(auth)
+      .then(() => {
+            Toastify({
+                  text: "Login as a guest",
+                  duration: 3000,
+                  destination: "https://github.com/apvarun/toastify-js",
+                  newWindow: true,
+                  close: true,
+                  gravity: "top", // `top` or `bottom`
+                  position: "right", // `left`, `center` or `right`
+                  stopOnFocus: true, // Prevents dismissing of toast on hover
+                  style: {
+                        background: "linear-gradient(to right, #f6ad55, #f9cb93)",
+                        width: "200px",
+                        height: "50px",
+                  },
+                  onClick: function () { } // Callback after click
+            }).showToast();
 
-//                   Toastify({
-//                         text: "This is a toast",
-//                         duration: 3000,
-//                         destination: "https://github.com/apvarun/toastify-js",
-//                         newWindow: true,
-//                         close: true,
-//                         gravity: "top", // `top` or `bottom`
-//                         position: "right", // `left`, `center` or `right`
-//                         stopOnFocus: true, // Prevents dismissing of toast on hover
-//                         style: {
-//                               background: "linear-gradient(to right, #f6ad55, #f9cb93)",
-//                               width: "200px",
-//                               height: "50px",
-//                         },
-//                         onClick: function () { } // Callback after click
-//                   }).showToast();
+            setTimeout(()=>{
+                  window.location.href = "../index.html"
+              },2000)
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log("guest Login " + errorMessage);
+        
+      });
 
-//             })
-//             .catch((error) => {
-//                   const errorCode = error.code;
-//                   const errorMessage = error.message;
-//             });
+});
 
-// })

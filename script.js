@@ -14,3 +14,8 @@ let signinBtn = document.getElementById('signinBtn');
 signinBtn.addEventListener('click', function(){
   window.location.href = "./loginform/login.html"
 })
+
+let exploreBtn = document.getElementById('exploreBtn');
+exploreBtn.addEventListener('click', function(){
+  window.location.href = "#gallery-content"
+})
