@@ -4,6 +4,8 @@ import { auth, signInWithEmailAndPassword, provider, signInWithPopup } from "../
 //Call the Dom Elements from the HTML
 let loginEmail = document.getElementById('loginEmail');
 let loginPassword = document.getElementById('loginPassword');
+console.log(loginEmail , loginEmail.value);
+console.log(loginPassword, loginPassword.value);
 
 // Get the Login Button
 let loginButton = document.getElementById('loginButton');
@@ -11,6 +13,8 @@ let loginButton = document.getElementById('loginButton');
 // Add Event Listener to the Login Button
 loginButton.addEventListener('click', async(e) => {
 
+      console.log(loginEmail , loginEmail.value);
+console.log(loginPassword, loginPassword.value);
       // SignIn function
       // if (loginEmail.value.trim() && loginPassword.value.trim()) {
       signInWithEmailAndPassword(auth, loginEmail.value, loginPassword.value)
@@ -36,6 +40,8 @@ loginButton.addEventListener('click', async(e) => {
                               onClick: function () { } // Callback after click
                         }).showToast();
 
+                        console.log(loginEmail , loginEmail.value);
+console.log(loginPassword, loginPassword.value);
                   })
                   .catch((error) => {
                         const errorCode = error.code;
@@ -43,7 +49,8 @@ loginButton.addEventListener('click', async(e) => {
                         console.log(errorMessage);
                         console.log(error);
                         
-                        
+                        console.log(loginEmail , loginEmail.value);
+console.log(loginPassword, loginPassword.value);
                   });
             // }
 
